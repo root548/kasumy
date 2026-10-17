@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasumi - Reportes</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo"><h1>🌸 Kasumi</h1></div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">📊 Dashboard</a></li>
+                <li><a href="citas.html">📅 Citas</a></li>
+                <li><a href="clientes.html">👤 Clientes</a></li>
+                <li><a href="especialistas.html">💇 Especialistas</a></li>
+                <li><a href="servicios.html">💅 Servicios</a></li>
+                <li class="active"><a href="reportes.html">📊 Reportes</a></li>
+                <li><a href="usuarios.html">👥 Usuarios</a></li>
+            </ul>
+        </nav>
+        <div class="logout"><a href="#">🚪 Cerrar sesión</a></div>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <span class="menu-toggle">☰</span>
+                <span class="breadcrumb">Kasumi > Reportes</span>
+            </div>
+            <div class="header-right">
+                <input type="text" class="search" placeholder="🔍 Buscar...">
+                <div class="user-profile">
+                    <span>👤 Admin</span>
+                    <span class="dropdown">▼</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="page active">
+            <h2>📊 Reportes</h2>
+            <p class="welcome">Visualiza las estadísticas del spa</p>
+
+            <div class="actions-bar">
+                <select class="search">
+                    <option>Ventas del día</option>
+                    <option>Ventas de la semana</option>
+                    <option>Ventas del mes</option>
+                    <option>Servicios más vendidos</option>
+                </select>
+                <button class="btn-primary">📥 Exportar PDF</button>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">💰</div>
+                    <div class="card-info">
+                        <h3>Ventas Totales</h3>
+                        <span class="number">$1,250,000</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📅</div>
+                    <div class="card-info">
+                        <h3>Citas Atendidas</h3>
+                        <span class="number">32</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⭐</div>
+                    <div class="card-info">
+                        <h3>Calificación Promedio</h3>
+                        <span class="number">4.8</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏆</div>
+                    <div class="card-info">
+                        <h3>Servicio Más Vendido</h3>
+                        <span class="number">Manicura</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

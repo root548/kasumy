@@ -1,0 +1,46 @@
+/* ============================================ */
+/* TOKENS DE DISEÑO - KASUMI                   */
+/* ============================================ */
+:root {
+    /* Colores */
+    --color-primary: #E91E63;
+    --color-primary-dark: #C2185B;
+    --color-primary-light: #FCE4EC;
+    --color-beige: #FFF8E1;
+    --color-white: #FFFFFF;
+    --color-text: #333333;
+    --color-text-light: #757575;
+    --color-success: #4CAF50;
+    --color-warning: #FF9800;
+    --color-danger: #F44336;
+    --color-border: #E0E0E0;
+    --color-bg: #F5F5F5;
+
+    /* Tipografía */
+    --font-family: Arial, sans-serif;
+    --font-size-base: 16px;
+    --font-size-sm: 14px;
+    --font-size-xs: 12px;
+    --font-size-lg: 18px;
+    --font-size-xl: 24px;
+    --font-size-2xl: 28px;
+
+    /* Espaciados */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+
+    /* Bordes */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-full: 50%;
+
+    /* Sombras */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    /* Layout */
+    --sidebar-width: 240px;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasumi - Clientes</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h1>🌸 Kasumi</h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">📊 Dashboard</a></li>
+                <li><a href="citas.html">📅 Citas</a></li>
+                <li class="active"><a href="clientes.html">👤 Clientes</a></li>
+                <li><a href="especialistas.html">💇 Especialistas</a></li>
+                <li><a href="servicios.html">💅 Servicios</a></li>
+                <li><a href="reportes.html">📊 Reportes</a></li>
+                <li><a href="usuarios.html">👥 Usuarios</a></li>
+            </ul>
+        </nav>
+        <div class="logout">
+            <a href="#">🚪 Cerrar sesión</a>
+        </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+
+        <header class="header">
+            <div class="header-left">
+                <span class="menu-toggle">☰</span>
+                <span class="breadcrumb">Kasumi > Clientes</span>
+            </div>
+            <div class="header-right">
+                <input type="text" class="search" placeholder="🔍 Buscar...">
+                <div class="user-profile">
+                    <span>👤 Admin</span>
+                    <span class="dropdown">▼</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="page active">
+            <h2>👤 Gestión de Clientes</h2>
+            <p class="welcome">Administra los clientes del spa</p>
+
+            <div class="actions-bar">
+                <button class="btn-primary">+ Nuevo Cliente</button>
+                <input type="text" class="search" placeholder="🔍 Buscar cliente...">
+            </div>
+
+            <div class="table-container">
+                <h3>📋 Lista de Clientes</h3>
+
+                <div class="tabla-scroll">
+                    <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Email</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>María Pérez</td>
+                            <td>3112345678</td>
+                            <td>maria@email.com</td>
+                            <td>
+                                <a href="#" class="btn-icon">✏️</a>
+                                <a href="#" class="btn-icon">🗑️</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Juan Gómez</td>
+                            <td>3123456789</td>
+                            <td>juan@email.com</td>
+                            <td>
+                                <a href="#" class="btn-icon">✏️</a>
+                                <a href="#" class="btn-icon">🗑️</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

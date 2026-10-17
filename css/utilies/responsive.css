@@ -1,0 +1,51 @@
+/* ============================================ */
+/* RESPONSIVE DESIGN                           */
+/* ============================================ */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+        padding: 15px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header .search {
+        width: 120px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .header .search {
+        width: 80px;
+    }
+
+    .header .menu-toggle {
+        display: block;
+    }
+}

@@ -1,0 +1,20 @@
+/* ============================================ */
+/* MAIN.CSS - IMPORTACIÓN DE TODOS LOS ESTILOS */
+/* ============================================ */
+
+/* Settings */
+@import url('settings/tokens.css');
+
+/* Base */
+@import url("reset/reset.css");
+
+/* Layout */
+@import url('layout/layout.css');
+
+/* Components */
+@import url('components/component.css');
+@import url('components/compnentsusuarios.css');
+
+/* Utilities */
+@import url('utilies/responsive.css');
+

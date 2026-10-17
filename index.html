@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasumi - Sistema de Gestión de Citas</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h1>🌸 Kasumi</h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="active"><a href="index.html">📊 Dashboard</a></li>
+                <li><a href="citas.html">📅 Citas</a></li>
+                <li><a href="clientes.html">👤 Clientes</a></li>
+                <li><a href="especialistas.html">💇 Especialistas</a></li>
+                <li><a href="servicios.html">💅 Servicios</a></li>
+                <li><a href="reportes.html">📊 Reportes</a></li>
+                <li><a href="usuarios.html">👥 Usuarios</a></li>
+            </ul>
+        </nav>
+        <div class="logout">
+            <a href="#">🚪 Cerrar sesión</a>
+        </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-left">
+                <span class="menu-toggle">☰</span>
+                <span class="breadcrumb">Kasumi > Dashboard</span>
+            </div>
+            <div class="header-right">
+                <input type="text" class="search" placeholder="🔍 Buscar...">
+                <div class="user-profile">
+                    <span>👤 Admin</span>
+                    <span class="dropdown">▼</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- DASHBOARD -->
+        <section class="page active">
+            <h2>📊 Dashboard</h2>
+            <p class="welcome">Bienvenido, Administrador</p>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">📅</div>
+                    <div class="card-info">
+                        <h3>Citas</h3>
+                        <span class="number">32</span>
+                        <a href="#" class="btn-small">+ Nueva</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">👤</div>
+                    <div class="card-info">
+                        <h3>Clientes</h3>
+                        <span class="number">45</span>
+                        <a href="#" class="btn-small">+ Nuevo</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💇</div>
+                    <div class="card-info">
+                        <h3>Especialistas</h3>
+                        <span class="number">5</span>
+                        <a href="#" class="btn-small">+ Nuevo</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💅</div>
+                    <div class="card-info">
+                        <h3>Servicios</h3>
+                        <span class="number">10</span>
+                        <a href="#" class="btn-small">+ Nuevo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <h3>📋 Citas de hoy - 13 de Marzo de 2026</h3>
+
+                <div class="tabla-scroll">
+                    <table>
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Cliente</th>
+                            <th>Servicio</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10:00</td>
+                            <td>María Pérez</td>
+                            <td>Manicura</td>
+                            <td><span class="status confirmed">✅ Confirmada</span></td>
+                            <td><a href="#" class="btn-icon">✏️</a> <a href="#" class="btn-icon">🗑️</a></td>
+                        </tr>
+                        <tr>
+                            <td>11:30</td>
+                            <td>Juan Gómez</td>
+                            <td>Pedicura</td>
+                            <td><span class="status pending">⏳ Pendiente</span></td>
+                            <td><a href="#" class="btn-icon">✏️</a> <a href="#" class="btn-icon">🗑️</a></td>
+                        </tr>
+                        <tr>
+                            <td>14:00</td>
+                            <td>Ana López</td>
+                            <td>Masaje</td>
+                            <td><span class="status cancelled">❌ Cancelada</span></td>
+                            <td><a href="#" class="btn-icon">✏️</a> <a href="#" class="btn-icon">🗑️</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

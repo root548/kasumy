@@ -1,0 +1,254 @@
+/* ============================================ */
+/* USUARIOS REGISTRADOS                        */
+/* ============================================ */
+
+/* Título */
+.page-title {
+    margin-bottom: var(--space-lg);
+    color: var(--color-text);
+}
+
+/* ============================================ */
+/* BARRA DE FILTROS                            */
+/* ============================================ */
+.filters-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    background-color: transparent;
+   
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+   
+}
+
+.filter-group label {
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    color: var(--color-text);
+    
+}
+
+.filter-group input,
+.filter-group select {
+    padding: 10px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-base);
+    background-color: var(--color-white);
+    font-family: var(--font-family);
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1);
+}
+
+.btn-filtrar {
+    background-color: #f0fff1;   /* verde suave */
+    color: #000503;
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-base);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.btn-filtrar:hover {
+    background-color: #a5a8a5;
+}
+
+/* ============================================ */
+/* TABLA RESPONSIVE                            */
+/* ============================================ */
+.table-responsive {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    overflow-x: auto;
+}
+
+.tabla-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px; /* fuerza el scroll horizontal en pantallas pequeñas */
+}
+
+.tabla-usuarios thead th {
+    text-align: left;
+    padding: 14px 16px;
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+    background-color: transparent;
+}
+
+.tabla-usuarios tbody td {
+    padding: 16px;
+    border-bottom: 1px solid var(--color-bg);
+    font-size: var(--font-size-sm);
+    vertical-align: middle;
+}
+
+.tabla-usuarios tbody tr:hover {
+    background-color: #FAFAFA;
+}
+
+/* ============================================ */
+/* CELDA USUARIO (Avatar + Info)               */
+/* ============================================ */
+.usuario-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #6e7572; /* verde claro */
+    color: #838883;
+    font-weight: bold;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-sm);
+    flex-shrink: 0;
+}
+
+.usuario-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.usuario-info strong {
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+.usuario-info span {
+    font-size: 12px;
+    color: var(--color-text-light);
+}
+
+/* ============================================ */
+/* BADGES DE ESTADO                            */
+/* ============================================ */
+.badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.badge.activo {
+    background-color: #f2f7f4;
+    color: #1B5E20;
+}
+
+.badge.inactivo {
+    background-color: #F5D0A9;
+    color: #7A4B12;
+}
+
+/* ============================================ */
+/* BOTÓN EDITAR                                */
+/* ============================================ */
+.btn-editar {
+    color: #8b928c;
+    font-weight: bold;
+    font-size: var(--font-size-sm);
+    text-decoration: underline;
+}
+
+.btn-editar:hover {
+    color: #0D3E14;
+}
+
+/* ============================================ */
+/* NOTA RESPONSIVE                             */
+/* ============================================ */
+.nota-responsive {
+    margin-top: var(--space-md);
+    font-size: 12px;
+    color: var(--color-text-light);
+    font-style: italic;
+}
+
+/* ============================================ */
+/* PAGINACIÓN                                  */
+/* ============================================ */
+.paginacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-lg);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.paginacion-controles {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pagina-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    color: var(--color-text);
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.pagina-btn:hover {
+    background-color: var(--color-primary-light);
+}
+
+.pagina-btn.active {
+    background-color: #fcfffd;
+    color: #1B5E20;
+}
+
+/* ============================================ */
+/* RESPONSIVE                                  */
+/* ============================================ */
+@media (max-width: 768px) {
+    .filters-bar {
+        flex-direction: column;
+        align-items: stretch;
+        
+    }
+
+    .btn-filtrar {
+        width: 100%;
+    }
+
+    .paginacion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,303 @@
+/* ============================================ */
+/* TARJETAS DE ESTADÍSTICAS                    */
+/* ============================================ */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card .card-icon {
+    font-size: 36px;
+    background-color: var(--color-primary-light);
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .card-info h3 {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    margin-bottom: var(--space-xs);
+}
+
+.card .card-info .number {
+    font-size: var(--font-size-2xl);
+    font-weight: bold;
+    display: block;
+}
+
+.card .card-info .btn-small {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    font-size: var(--font-size-xs);
+    color: var(--color-primary);
+    background-color: var(--color-primary-light);
+    padding: 4px 12px;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+}
+
+.card .card-info .btn-small:hover {
+    background-color: #F8BBD0;
+}
+
+/* ============================================ */
+/* TABLAS                                      */
+/* ============================================ */
+.table-container {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.table-container h3 {
+    margin-bottom: var(--space-md);
+    font-size: var(--font-size-lg);
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container thead th {
+    text-align: left;
+    padding: 12px 15px;
+    background-color: var(--color-primary-light);
+    border-bottom: 2px solid var(--color-primary);
+    font-size: var(--font-size-sm);
+}
+
+.table-container tbody td {
+    padding: 12px 15px;
+    font-size: var(--font-size-sm);
+    border-bottom: 1px solid var(--color-bg);
+}
+
+.table-container tbody tr:hover {
+    background-color: var(--color-primary-light);
+}
+
+/* ============================================ */
+/* ESTADOS DE CITAS                            */
+/* ============================================ */
+.status {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status.confirmed {
+    background-color: #E8F5E9;
+    color: var(--color-success);
+}
+
+.status.pending {
+    background-color: #FFF8E1;
+    color: var(--color-warning);
+}
+
+.status.cancelled {
+    background-color: #FFEBEE;
+    color: var(--color-danger);
+}
+
+/* ============================================ */
+/* BOTONES                                     */
+/* ============================================ */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-base);
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    padding: 12px 24px;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-base);
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary-light);
+}
+
+.btn-success {
+    background-color: var(--color-success);
+    color: var(--color-white);
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-base);
+}
+
+.btn-icon {
+    font-size: var(--font-size-lg);
+    margin-right: var(--space-sm);
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.btn-icon:hover {
+    transform: scale(1.2);
+}
+
+/* ============================================ */
+/* FORMULARIOS                                 */
+/* ============================================ */
+.form-container {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.form-container h3 {
+    margin-bottom: var(--space-md);
+    font-size: var(--font-size-lg);
+}
+
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-weight: bold;
+    font-size: var(--font-size-sm);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-base);
+    font-family: var(--font-family);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1);
+}
+
+.form-buttons {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.actions-bar {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.page h2{
+    font-size: 30px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--radius-sm);
+    text-align: center;
+    transition: background-color 0.3s;
+    margin: 20px;
+}
+
+.welcome{
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    color: var(--color-text);
+    margin: 10px;
+
+    
+}
+
+.search{
+       padding: 10px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-base);
+    background-color: var(--color-white);
+    font-family: var(--font-family);
+}
+
+
+
+/* para la barra lateral /* ============================================ */
+/* TABLA CON SCROLL HORIZONTAL                  */
+/* ============================================ */
+.tabla-scroll {
+    overflow-x: auto;              /* Activa scroll horizontal */
+    -webkit-overflow-scrolling: touch;  /* Scroll suave en iOS */
+    border-radius: var(--radius-sm);
+}
+
+.tabla-scroll table {
+    min-width: 600px;              /* Ancho mínimo para forzar el scroll */
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Personalizar la barra de scroll (opcional) */
+.tabla-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tabla-scroll::-webkit-scrollbar-track {
+    background: #F5F5F5;
+    border-radius: 4px;
+}
+
+.tabla-scroll::-webkit-scrollbar-thumb {
+    background: #E91E63;           /* Color de la barra */
+    border-radius: 4px;
+}
+
+.tabla-scroll::-webkit-scrollbar-thumb:hover {
+    background: #C2185B;
+} 
+/* fin de la edicion de barra */
