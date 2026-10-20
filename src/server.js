@@ -8,7 +8,7 @@ async function startServer() {
  console.log('MySQL connected successfully');
 
  app.listen(PORT, () => {
-  console.log(`SICE API running on port ${PORT}`);
+  console.log(`kasumy API running on port ${PORT}`);
  });
  } catch (error) {
  console.error('Error connecting to MySQL:', error.message);
