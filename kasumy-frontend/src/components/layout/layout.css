@@ -1,0 +1,225 @@
+/* ============================================ */
+/* VARIABLES Y RESET                            */
+/* ============================================ */
+:root {
+    --color-primary: #E91E63;
+    --color-primary-light: #FCE4EC;
+    --color-bg: #F5F5F5;
+    --color-white: #FFFFFF;
+    --color-text: #333333;
+    --color-text-light: #757575;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* ============================================ */
+/* ESTRUCTURA GENERAL                           */
+/* ============================================ */
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ============================================ */
+/* SIDEBAR (Menú Lateral)                       */
+/* ============================================ */
+.sidebar {
+    width: 220px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.sidebar .logo h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* Siempre en columna */
+    gap: 5px;
+}
+
+.sidebar .menu ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.sidebar .menu ul li a:hover,
+.sidebar .menu ul li.active a {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+.sidebar .logout {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sidebar .logout button {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+}
+
+.sidebar .logout button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================ */
+/* CONTENIDO PRINCIPAL (Wrapper)                */
+/* ============================================ */
+.main-wrapper {
+    margin-left: 220px;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* ============================================ */
+/* HEADER                                       */
+/* ============================================ */
+.header {
+    background-color: var(--color-white);
+    padding: 15px 25px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header .breadcrumb {
+    color: var(--color-text-light);
+    font-size: 14px;
+}
+
+.header .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header .search {
+    padding: 8px 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 20px;
+    font-size: 14px;
+    width: 200px;
+}
+
+.header .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.app-content {
+    flex: 1;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Botón hamburguesa (Oculto en escritorio) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ============================================ */
+/* DISEÑO RESPONSIVE (Móviles < 768px)          */
+/* ============================================ */
+@media (max-width: 768px) {
+    .main-wrapper {
+        margin-left: 0 !important;
+        padding: 15px;
+    }
+
+    /* Botón hamburguesa */
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        margin-right: 10px;
+    }
+
+    /* Ocultar breadcrumb */
+    .breadcrumb {
+        display: none;
+    }
+
+    /* Header ajustado a columna */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .header-left {
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search {
+        width: 60%;
+    }
+
+    /* Barra lateral flotante (Gaveta) */
+    .sidebar {
+        width: 250px;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Cuando tiene la clase "abierto", se muestra */
+    .sidebar.abierto {
+        transform: translateX(0);
+    }
+}

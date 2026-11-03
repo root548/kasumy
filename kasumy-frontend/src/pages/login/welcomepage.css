@@ -1,0 +1,99 @@
+/* Fondo oscuro para que resalten las luces */
+.welcome-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #070606;
+        background-color:;
+    /* Fondo oscuro como en tu imagen */
+    margin: 0;
+}
+
+/* La caja contenedora */
+.welcome-box {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    background-color: #1E1E1E;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Las luces que se mueven por los bordes */
+.welcome-box::before,
+.welcome-box::after {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: linear-gradient(45deg, #E91E63, #00E5FF, #E91E63, #00E5FF);
+    background-size: 300% 300%;
+    animation: neonRotate 4s linear infinite;
+    z-index: 1;
+}
+
+.welcome-box::after {
+    filter: blur(20px);
+}
+
+@keyframes neonRotate {
+    0% {
+        transform: rotate(0deg);
+        background-position: 0% 50%;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        background-position: 100% 50%;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        background-position: 0% 50%;
+    }
+}
+
+/* La tarjeta interior */
+.neon-button {
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    border-radius: 8px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* El recuadro donde está la palabra LOGIN */
+.neon-button span {
+    background: #1A1A1A;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    border: 1px solid #333;
+    box-shadow: inset 0 0 10px rgba(233, 30, 99, 0.2);
+    /* Brillo interior */
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima */
+.neon-button:hover span {
+    text-shadow: 0 0 10px #E91E63, 0 0 20px #E91E63;
+    box-shadow: inset 0 0 20px rgba(233, 30, 99, 0.5), 0 0 20px rgba(233, 30, 99, 0.5);
+    border-color: #E91E63;
+}
+
+.neon-button:active {
+    transform: scale(0.98);
+}

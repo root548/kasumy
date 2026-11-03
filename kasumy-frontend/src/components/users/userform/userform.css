@@ -1,0 +1,70 @@
+.user-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+}
+
+.user-form h3 {
+    margin: 0;
+    color: #E91E63;
+}
+
+.user-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 14px;
+    gap: 5px;
+}
+
+.user-form input,
+.user-form select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-guardar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+}
+
+/* Estilo base del botón Cancelar */
+.btn-cancelar {
+    background-color: #e0e0e0;
+    /* Un gris claro por defecto (puedes cambiarlo si prefieres otro) */
+    color: #333;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Transición suave */
+    flex: 1;
+}
+
+/* Efecto al pasar el mouse por encima: cambia a rojo */
+.btn-cancelar:hover {
+    background-color: #e74c3c;
+    /* Rojo */
+    color: white;
+    /* Texto blanco para que resalte bien */
+}
